@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AcpDetailedInfoComponent } from './acp-detailed-info.component';
+import { AcpDbDefaultComponent } from './acp-db-default.component';
 
-describe('AcpDetailedInfoComponent', () => {
-  let component: AcpDetailedInfoComponent;
-  let fixture: ComponentFixture<AcpDetailedInfoComponent>;
+describe('AcpDbDefaultComponent', () => {
+  let component: AcpDbDefaultComponent;
+  let fixture: ComponentFixture<AcpDbDefaultComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcpDetailedInfoComponent ]
+      declarations: [ AcpDbDefaultComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AcpDetailedInfoComponent);
+    fixture = TestBed.createComponent(AcpDbDefaultComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

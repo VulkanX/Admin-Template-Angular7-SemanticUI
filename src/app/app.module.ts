@@ -7,18 +7,18 @@ import {SuiModule} from 'ng2-semantic-ui';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AcpMenubarComponent } from './acp-menubar/acp-menubar.component';
-import { AcpGeneralInfoComponent } from './acp-general-info/acp-general-info.component';
-import { AcpDynamicSubmenuComponent } from './acp-dynamic-submenu/acp-dynamic-submenu.component';
-import { AcpDetailedInfoComponent } from './acp-detailed-info/acp-detailed-info.component';
+import { AcpLoginComponent } from './acp-login/acp-login.component';
+import { AcpDashboardComponent } from './acp-dashboard/acp-dashboard.component';
+import { AcpDbDefaultComponent } from './acp-dashboard/acp-db-default/acp-db-default.component';
+import { AcpAccountComponent } from './acp-account/acp-account.component';
 
 @NgModule({
    declarations: [
       AppComponent,
-      AcpMenubarComponent,
-      AcpGeneralInfoComponent,
-      AcpDynamicSubmenuComponent,
-      AcpDetailedInfoComponent
+      AcpLoginComponent,
+      AcpDashboardComponent,
+      AcpDbDefaultComponent,
+      AcpAccountComponent
    ],
    imports: [
       BrowserModule,

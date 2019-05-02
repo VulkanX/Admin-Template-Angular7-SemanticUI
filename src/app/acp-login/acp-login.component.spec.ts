@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AcpDynamicSubmenuComponent } from './acp-dynamic-submenu.component';
+import { AcpLoginComponent } from './acp-login.component';
 
-describe('AcpDynamicSubmenuComponent', () => {
-  let component: AcpDynamicSubmenuComponent;
-  let fixture: ComponentFixture<AcpDynamicSubmenuComponent>;
+describe('AcpLoginComponent', () => {
+  let component: AcpLoginComponent;
+  let fixture: ComponentFixture<AcpLoginComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcpDynamicSubmenuComponent ]
+      declarations: [ AcpLoginComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AcpDynamicSubmenuComponent);
+    fixture = TestBed.createComponent(AcpLoginComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

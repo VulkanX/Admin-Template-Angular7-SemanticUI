@@ -3,21 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { AcpMenubarComponent } from './acp-menubar.component';
+import { AcpDashboardComponent } from './acp-dashboard.component';
 
-describe('AcpMenubarComponent', () => {
-  let component: AcpMenubarComponent;
-  let fixture: ComponentFixture<AcpMenubarComponent>;
+describe('AcpDashboardComponent', () => {
+  let component: AcpDashboardComponent;
+  let fixture: ComponentFixture<AcpDashboardComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcpMenubarComponent ]
+      declarations: [ AcpDashboardComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AcpMenubarComponent);
+    fixture = TestBed.createComponent(AcpDashboardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

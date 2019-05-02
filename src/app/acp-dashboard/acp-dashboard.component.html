@@ -1,0 +1,52 @@
+<div class="ui fluid container">
+  <div class="ui fixed inverted blue mini menu">
+    <a class="header item" (click)="sidebar.toggle()">VAdmin 2019</a>
+    <a class="active item">Menu 1</a>
+    <a class="item">Menu 2</a>
+    <div class="ui pointing dropdown link item" suiDropdown>
+      <div class="text">Menu 3</div>
+      <i class="ui dropdown icon"></i>
+      <div class="menu" suiDropdownMenu>
+        <div class="item">Sub Menu 1</div>
+        <div class="disabled item">Disabled Menu</div>
+        <div class="item" suiDropdown>
+          <i class="dropdown icon"></i>
+          Sub Menu 2
+          <div class="menu" suiDropdownMenu>
+            <div class="item">Sub-item 1</div>
+            <div class="item">Sub-item 2</div>
+          </div>
+        </div>
+        <div class="item">Sub Menu 3</div>
+      </div>
+    </div>
+    <div class="right menu">
+      <div class="item">
+        <div class="ui icon input">
+          <i class="search icon"></i>
+          <input type="text" placeholder="Search..." />
+        </div>
+      </div>
+      <div class="ui top right pointing dropdown link item" suiDropdown>
+        <i class="ui labeled user circle icon"></i>User
+        <div class="menu" suiDropdownMenu>
+          <div class="item">Account</div>
+          <div class="item">Messages</div>
+          <div class="item">Logout</div>
+        </div>
+      </div>
+      <div class="item"></div>
+    </div>
+  </div>
+  <div class="ui fluid container" style="height: 100vh; padding-top: 35px;">
+    <sui-sidebar-container class="ui bottom attached segment">
+      <sui-sidebar class="inverted vertical" #sidebar>
+        <a class="item">Menu 1</a>
+        <a class="item">Menu 2</a>
+      </sui-sidebar>
+      <sui-sidebar-sibling [isDimmedWhenVisible]="true">
+        <router-outlet></router-outlet>
+      </sui-sidebar-sibling>
+    </sui-sidebar-container>
+  </div>
+</div>
