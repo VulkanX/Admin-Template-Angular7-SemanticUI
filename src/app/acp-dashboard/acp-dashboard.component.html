@@ -3,6 +3,7 @@
     <a class="header item" (click)="sidebar.toggle()">VAdmin 2019</a>
     <a class="active item">Menu 1</a>
     <a class="item">Menu 2</a>
+
     <div class="ui pointing dropdown link item" suiDropdown>
       <div class="text">Menu 3</div>
       <i class="ui dropdown icon"></i>
@@ -20,6 +21,31 @@
         <div class="item">Sub Menu 3</div>
       </div>
     </div>
+
+    <!-- Examples Menu -->
+    <div class="ui pointing dropdown link item" suiDropdown>
+      <div class="text">Examples</div>
+      <i class="ui dropdown icon"></i>
+      <div class="menu" suiDropdownMenu>
+        <div class="item" suiDropdown>
+          <i class="dropdown icon"></i>
+          Pages
+          <div class="menu" suiDropdownMenu>
+            <a class="item" routerLink="/login">Login</a>
+          </div>
+        </div>
+        <div class="item" suiDropdown>
+          <i class="dropdown icon"></i>
+          Dashboard
+          <div class="menu" suiDropdownMenu>
+            <a class="item" routerLink="/dashboard">Default</a>
+            <a class="disabled item">Account</a>
+          </div>
+        </div>
+        <div class="item">Sub Menu 3</div>
+      </div>
+    </div>
+
     <div class="right menu">
       <div class="item">
         <div class="ui icon input">

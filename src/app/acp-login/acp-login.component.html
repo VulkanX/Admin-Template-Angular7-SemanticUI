@@ -1,3 +1,48 @@
-<p>
-  acp-login works!
-</p>
+<div
+  class="ui fluid container"
+  [style.backgroundColor]="backgroundColor1"
+  style="height: 100vh;"
+>
+  <div class="ui equal width center aligned padded grid" style="height: 100%">
+    <div class="row"></div>
+    <div
+      class="row"
+      style="display: flex; align-items: center; align-content: center;"
+      [ngStyle]="{
+        'box-shadow':
+          hasShadow === true ? '0px 2px 15px 8px rgba(0,0,0,0.55)' : ''
+      }"
+      [style.backgroundColor]="backgroundColor2"
+    >
+      <form class="ui large fluid form">
+        <h2 class="ui centered dividing header">{{ loginTitleText }}</h2>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="user icon"></i>
+            <input
+              type="text"
+              name="email"
+              [placeholder]="loginPlaceholderText"
+            />
+          </div>
+        </div>
+        <div class="field">
+          <div class="ui left icon input">
+            <i class="lock icon"></i>
+            <input
+              type="password"
+              name="password"
+              [placeholder]="passPlaceholderText"
+            />
+          </div>
+        </div>
+        <div [class]="'ui fluid large submit button ' + loginButtonColor" (click)="processLogin();">
+          Login
+        </div>
+
+        <div class="ui error message"></div>
+      </form>
+    </div>
+    <div class="row"></div>
+  </div>
+</div>
