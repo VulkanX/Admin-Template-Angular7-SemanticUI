@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule }   from '@angular/forms';
 
 import {SuiModule} from 'ng2-semantic-ui';
 
@@ -11,6 +11,7 @@ import { AcpLoginComponent } from './acp-login/acp-login.component';
 import { AcpDashboardComponent } from './acp-dashboard/acp-dashboard.component';
 import { AcpDbDefaultComponent } from './acp-dashboard/acp-db-default/acp-db-default.component';
 import { AcpAccountComponent } from './acp-account/acp-account.component';
+import { AcpAuthService } from './acp-auth.service';
 
 @NgModule({
    declarations: [
@@ -22,11 +23,13 @@ import { AcpAccountComponent } from './acp-account/acp-account.component';
    ],
    imports: [
       BrowserModule,
-      FormsModule,
+      ReactiveFormsModule,
       SuiModule,
       AppRoutingModule
    ],
-   providers: [],
+   providers: [
+      AcpAuthService
+   ],
    bootstrap: [
       AppComponent
    ]

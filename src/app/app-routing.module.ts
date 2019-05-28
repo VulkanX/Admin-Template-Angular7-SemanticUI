@@ -4,12 +4,13 @@ import { AcpDashboardComponent } from './acp-dashboard/acp-dashboard.component';
 import { AcpLoginComponent } from './acp-login/acp-login.component';
 import { AcpAccountComponent } from './acp-account/acp-account.component';
 import { AcpDbDefaultComponent } from './acp-dashboard/acp-db-default/acp-db-default.component';
+import { AcpAuthService } from './acp-auth.service';
 
 const routes: Routes = [
 
   { path: '', pathMatch: 'full', redirectTo: '/dashboard' },
   { path: 'login', component: AcpLoginComponent },
-  { path: 'account', component: AcpAccountComponent },
+  { path: 'account', component: AcpAccountComponent, canActivate: [AcpAuthService] },
   {
     path: 'dashboard', 
     component: AcpDashboardComponent,

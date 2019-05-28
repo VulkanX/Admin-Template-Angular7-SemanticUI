@@ -14,7 +14,7 @@
       }"
       [style.backgroundColor]="backgroundColor2"
     >
-      <form class="ui large fluid form">
+      <form class="ui large fluid form" [formGroup]="loginForm" (ngSubmit)="processLogin()">
         <h2 class="ui centered dividing header">{{ loginTitleText }}</h2>
         <div class="field">
           <div class="ui left icon input">
@@ -23,22 +23,30 @@
               type="text"
               name="email"
               [placeholder]="loginPlaceholderText"
+              formControlName="userName"
             />
           </div>
         </div>
+        <div *ngIf="!loginForm.controls.userName.valid && loginForm.controls.userName.touched" class="ui red tiny message">
+            Email Address Required
+        </div>
         <div class="field">
-          <div class="ui left icon input">
+          <div class="ui left icon input error">
             <i class="lock icon"></i>
             <input
               type="password"
               name="password"
               [placeholder]="passPlaceholderText"
+              formControlName="password"
             />
           </div>
+          <div *ngIf="!loginForm.controls.password.valid && loginForm.controls.password.touched" class="ui red tiny message">
+              Password Is Required!
+          </div>
         </div>
-        <div [class]="'ui fluid large submit button ' + loginButtonColor" (click)="processLogin();">
+        <button type="submit" [class]="'ui fluid large submit button ' + loginButtonColor" (click)="processLogin();" [disabled]="!loginForm.valid">
           Login
-        </div>
+        </button>
 
         <div class="ui error message"></div>
       </form>
